@@ -1,47 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <!--Link css-->
-    <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Insight Metrics connects organizational strategy, research, measurement, and evaluation to meaningful improvement.">
+  <title>Insight Metrics | From Strategy to Evidence</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <div id="greeting"></div>
-
-    <div id="im-unique" class="bold large red">
-        <h1> Hello World</h1>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Insight Metrics homepage"><span class="brand-mark">IM</span><span>Insight <strong>Metrics</strong></span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">☰ Menu</button>
+      <nav id="main-navigation" aria-label="Main navigation" class="main-nav">
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#industries">Industries</a>
+        <a href="#approach">Our Approach</a>
+        <a href="#work">Our Work</a>
+        <a href="#insights">Insights</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="button button-small" href="#contact">Request a Consultation</a>
     </div>
-
-    <div id="me-too" class="bold large blue">
-
-    </div>
-    
-    <form>
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name">
-
-  <br><br>
-
-  <label for="phone">Phone Number:</label>
-  <input type="tel" id="phone" name="phone">
-
-  <br><br>
-
-  <button type="submit">Submit</button>
-</form>
-
-<label for="message">Message:</label>
-<textarea id="message" name="message" rows="5" cols="30"></textarea>
-
-
-
-
-        <!--Link javascript-->
-    <script src="script.js"></script>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-content">
+        <p class="eyebrow">INSIGHT METRICS · ORGANIZATIONAL EFFECTIVENESS</p>
+        <h1>From Strategy <span>to Evidence</span></h1>
+        <p class="hero-lead">Define success. Measure what matters. Improve with evidence.</p>
+        <p>We help educational institutions, nonprofits, and businesses connect organizational strategy, research, measurement, and evaluation to make informed decisions and achieve meaningful improvement.</p>
+        <a class="button" href="#approach">Explore Our Approach</a>
+      </div>
+    </section>
+    <section class="section" id="about"><div class="container narrow">
+      <p class="eyebrow teal">WHO WE ARE</p><h2>Turning purpose into measurable progress</h2>
+      <p>Insight Metrics brings together strategic planning, organizational effectiveness, applied research, evaluation, analytics, and practical digital solutions. We work collaboratively to clarify questions, build useful evidence, and support better decisions.</p>
+    </div></section>
+    <section class="section section-soft" id="services"><div class="container">
+      <p class="eyebrow teal">WHAT WE DO</p><h2>Five integrated practice areas</h2>
+      <div class="card-grid">
+        <article class="service-card"><span class="card-number">01</span><h3>Strategy &amp; Organizational Effectiveness</h3><p>Align purpose, priorities, governance, and continuous improvement.</p></article>
+        <article class="service-card"><span class="card-number">02</span><h3>Research, Evaluation &amp; Assessment</h3><p>Answer important questions using appropriate research and evaluation methods.</p></article>
+        <article class="service-card"><span class="card-number">03</span><h3>Measurement, Analytics &amp; Decision Support</h3><p>Develop indicators, data systems, dashboards, and actionable insights.</p></article>
+        <article class="service-card"><span class="card-number">04</span><h3>Growth, Funding &amp; Sustainability</h3><p>Strengthen funding readiness, organizational capacity, and sustainability.</p></article>
+        <article class="service-card"><span class="card-number">05</span><h3>Technology &amp; Digital Solutions</h3><p>Design practical digital workflows, forms, websites, and reporting tools.</p></article>
+      </div>
+      <div class="services-action"><button class="button" id="toggle-services" type="button" aria-expanded="false" aria-controls="services-detail">Explore service details</button></div>
+      <div id="services-detail" class="details-panel" hidden><h3>How our services connect</h3><p>We tailor the combination of strategic planning, research, measurement, sustainability, and technology to the needs of each organization. Not every engagement requires all five areas.</p><p>Our signature specialization is Education &amp; Institutional Effectiveness.</p></div>
+    </div></section>
+    <section class="section" id="industries"><div class="container">
+      <p class="eyebrow teal">WHO WE SERVE</p><h2>Built around your organizational context</h2>
+      <div class="pill-grid"><div>Education &amp; Learning</div><div>Nonprofits &amp; Humanitarian Organizations</div><div>Businesses &amp; Professional Practices</div><div>Boards &amp; Leadership</div></div>
+      <p class="section-note">Education and institutional effectiveness is a signature specialization; our integrated practices also serve other sectors.</p>
+    </div></section>
+    <section class="section section-soft" id="approach"><div class="container">
+      <p class="eyebrow teal">HOW WE WORK</p><h2>An iterative, evidence-informed approach</h2>
+      <div class="steps" role="group" aria-label="Explore methodology stages">
+        <button type="button" class="step-button is-active" data-stage="0" aria-pressed="true">Define</button><button type="button" class="step-button" data-stage="1" aria-pressed="false">Design</button><button type="button" class="step-button" data-stage="2" aria-pressed="false">Measure</button><button type="button" class="step-button" data-stage="3" aria-pressed="false">Collect</button><button type="button" class="step-button" data-stage="4" aria-pressed="false">Analyze</button><button type="button" class="step-button" data-stage="5" aria-pressed="false">Evaluate</button><button type="button" class="step-button" data-stage="6" aria-pressed="false">Improve</button>
+      </div><div class="stage-panel" id="stage-panel" aria-live="polite"><h3 id="stage-title">Define</h3><p id="stage-description">Clarify mission, goals, intended outcomes, and the decisions the evidence should support.</p></div>
+      <p class="section-note">Our work is guided by strategic alignment, theory of change, meaningful measurement, and evaluation of organizational effectiveness. The stages are adapted to each project—not imposed as a rigid sequence.</p>
+    </div></section>
+    <section class="section" id="work"><div class="container narrow"><p class="eyebrow teal">OUR WORK</p><h2>Evidence of work, responsibly presented</h2><p>Our Work will feature verified project descriptions and client-approved case studies as they become available. We distinguish illustrative applications from documented results.</p></div></section>
+    <section class="section section-soft" id="insights"><div class="container narrow"><p class="eyebrow teal">INSIGHTS</p><h2>Resources for informed decisions</h2><p>Future knowledge centers will explore accreditation, strategic planning, program evaluation, survey research, learning outcomes assessment, and organizational effectiveness.</p></div></section>
+    <section class="contact-section" id="contact"><div class="container narrow"><p class="eyebrow">LET'S CONNECT</p><h2>Make evidence useful for your next decision</h2><p>Tell us about the challenge, question, or opportunity your organization is facing.</p><p class="contact-note">Contact form and business email will be connected after you confirm your preferred contact details.</p></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© 2026 Insight Metrics</span><span>From Strategy to Evidence</span></div></footer>
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top">↑ Top</button>
+  <script src="script.js" defer></script>
 </body>
 </html>
