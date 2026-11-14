@@ -1,0 +1,1 @@
+Insight Metrics Industries page: Find Resources update. Replace industries.html and styles.css in your website folder; copy the four image files into your existing Images folder without deleting existing images. Find Resources expands a short list in each card; these are not links to published resource documents. Keep script.js and other website pages unchanged.

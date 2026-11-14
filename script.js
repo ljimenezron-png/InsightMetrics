@@ -2,12 +2,12 @@
 // Navigation on smaller screens
 const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#main-navigation');
-menuButton.addEventListener('click', () => {
+if (menuButton && navigation) menuButton.addEventListener('click', () => {
   const expanded = menuButton.getAttribute('aria-expanded') === 'true';
   menuButton.setAttribute('aria-expanded', String(!expanded));
   navigation.classList.toggle('is-open', !expanded);
 });
-navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+if (menuButton && navigation) navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
   menuButton.setAttribute('aria-expanded', 'false');
   navigation.classList.remove('is-open');
 }));
@@ -15,7 +15,7 @@ navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', 
 // Expandable overview of the five service areas
 const servicesButton = document.querySelector('#toggle-services');
 const servicesDetail = document.querySelector('#services-detail');
-servicesButton.addEventListener('click', () => {
+if (servicesButton && servicesDetail) servicesButton.addEventListener('click', () => {
   const opening = servicesDetail.hidden;
   servicesDetail.hidden = !opening;
   servicesButton.setAttribute('aria-expanded', String(opening));
@@ -35,7 +35,7 @@ const stageDescriptions = [
 const stageButtons = [...document.querySelectorAll('.step-button')];
 const stageTitle = document.querySelector('#stage-title');
 const stageDescription = document.querySelector('#stage-description');
-stageButtons.forEach(button => button.addEventListener('click', () => {
+if (stageTitle && stageDescription) stageButtons.forEach(button => button.addEventListener('click', () => {
   const index = Number(button.dataset.stage);
   stageButtons.forEach(item => {
     const active = item === button;
@@ -48,7 +48,7 @@ stageButtons.forEach(button => button.addEventListener('click', () => {
 
 // Back-to-top button
 const topButton = document.querySelector('#back-to-top');
-function updateTopButton() { topButton.classList.toggle('is-visible', window.scrollY > 450); }
+function updateTopButton() { if (!topButton) return; topButton.classList.toggle('is-visible', window.scrollY > 450); }
 window.addEventListener('scroll', updateTopButton, {passive:true});
 updateTopButton();
-topButton.addEventListener('click', () => window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'}));
+if (topButton) topButton.addEventListener('click', () => window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'}));
